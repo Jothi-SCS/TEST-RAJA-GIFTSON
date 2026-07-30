@@ -1,9 +1,11 @@
 #!/bin/bash
 
-sqlite3 CollegeDB.db < solution.sql > output.txt 2>error.txt
+mysql -h127.0.0.1 -uroot -proot < starter/department.sql 2>error.log
 
 if [ $? -ne 0 ]; then
-    echo "SQL Execution Failed"
+    echo "========== MYSQL ERROR =========="
+    cat error.log
+    echo "================================="
     exit 1
 fi
 
