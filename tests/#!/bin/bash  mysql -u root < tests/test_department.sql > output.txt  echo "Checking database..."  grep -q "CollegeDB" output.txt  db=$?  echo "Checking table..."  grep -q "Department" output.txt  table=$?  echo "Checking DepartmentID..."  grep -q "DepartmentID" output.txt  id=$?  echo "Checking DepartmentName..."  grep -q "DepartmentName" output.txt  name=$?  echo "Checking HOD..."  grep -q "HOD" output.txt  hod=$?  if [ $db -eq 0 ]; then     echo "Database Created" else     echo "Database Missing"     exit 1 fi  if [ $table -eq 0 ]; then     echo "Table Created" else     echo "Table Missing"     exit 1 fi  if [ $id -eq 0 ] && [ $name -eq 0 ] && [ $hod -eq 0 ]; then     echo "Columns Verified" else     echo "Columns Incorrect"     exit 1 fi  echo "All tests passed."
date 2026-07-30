@@ -1,0 +1,56 @@
+#!/bin/bash
+
+mysql -u root < tests/test_department.sql > output.txt
+
+echo "Checking database..."
+
+grep -q "CollegeDB" output.txt
+
+db=$?
+
+echo "Checking table..."
+
+grep -q "Department" output.txt
+
+table=$?
+
+echo "Checking DepartmentID..."
+
+grep -q "DepartmentID" output.txt
+
+id=$?
+
+echo "Checking DepartmentName..."
+
+grep -q "DepartmentName" output.txt
+
+name=$?
+
+echo "Checking HOD..."
+
+grep -q "HOD" output.txt
+
+hod=$?
+
+if [ $db -eq 0 ]; then
+    echo "Database Created"
+else
+    echo "Database Missing"
+    exit 1
+fi
+
+if [ $table -eq 0 ]; then
+    echo "Table Created"
+else
+    echo "Table Missing"
+    exit 1
+fi
+
+if [ $id -eq 0 ] && [ $name -eq 0 ] && [ $hod -eq 0 ]; then
+    echo "Columns Verified"
+else
+    echo "Columns Incorrect"
+    exit 1
+fi
+
+echo "All tests passed."
