@@ -1,5 +1,4 @@
-# TEST-RAJA-GIFTSON
-# SQL Assignment 1
+# Assignment: Create CollegeDB Database and Department Table
 
 ## Objective
 
@@ -7,42 +6,39 @@ Create a database named **CollegeDB** and create a table named **Department**.
 
 ### Table Structure
 
-| Field | Type | Constraint |
-|---------|---------|-------------|
-| DepartmentID | Number(5) | Primary Key |
-| DepartmentName | Varchar(20) | |
-| HOD | Varchar(20) | |
-
----
+| Column | Type | Constraints |
+|---------|------|-------------|
+| DepartmentID | INT | Primary Key |
+| DepartmentName | VARCHAR(20) | |
+| HOD | VARCHAR(20) | |
 
 ## Instructions
 
-1. Open **solution.sql**.
-2. Write SQL statements to:
-   - Create the database.
-   - Select the database.
-   - Create the Department table.
-3. Do **not** change file names.
-4. Commit and push your solution to GitHub.
-5. GitHub Actions will automatically evaluate your submission.
+1. Fork or clone this repository.
+2. Open `starter/department.sql`.
+3. Complete the SQL statements.
+4. Commit your changes.
+5. Push to GitHub.
 
----
+GitHub Actions will automatically grade your submission.
 
 ## Expected Output
 
+The script should:
+
+- Create the database `CollegeDB`
+- Use the database
+- Create the `Department` table
+- Define `DepartmentID` as the Primary Key
+
+## Submission
+
+Only edit:
+
 ```
-Department table created successfully.
+starter/department.sql
 ```
 
----
+Do not modify the test files.
 
-## Marks Distribution
-
-| Task | Marks |
-|--------|--------|
-| Create Database | 2 |
-| Use Database | 2 |
-| Create Table | 4 |
-| Correct Constraints | 2 |
-
-**Total = 10 Marks**
+Good luck!
