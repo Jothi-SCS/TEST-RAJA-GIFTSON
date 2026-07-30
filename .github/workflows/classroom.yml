@@ -1,0 +1,24 @@
+name: SQL Assignment
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v4
+
+    - name: Install SQLite
+      run: |
+        sudo apt-get update
+        sudo apt-get install sqlite3 -y
+
+    - name: Give Execute Permission
+      run: chmod +x autograde.sh
+
+    - name: Run Autograder
+      run: ./autograde.sh
