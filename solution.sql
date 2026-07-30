@@ -23,3 +23,15 @@ HOD             Varchar(20)
 */
 
 -- Write your CREATE TABLE statement below
+-- Step 1: Create the Database
+CREATE DATABASE CollegeDB;
+
+-- Step 2: Select the Database
+USE CollegeDB;
+
+-- Step 3: Create the Department Table
+CREATE TABLE Department (
+    DepartmentID INT(5) PRIMARY KEY,
+    DepartmentName VARCHAR(20),
+    HOD VARCHAR(20)
+);
