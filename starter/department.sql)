@@ -1,0 +1,23 @@
+-- =====================================
+-- Student Name:
+-- Register Number:
+-- =====================================
+
+-- Create the CollegeDB database below
+
+
+
+-- Select the database
+
+
+
+-- Create the Department table
+
+/*
+Fields
+
+DepartmentID INT PRIMARY KEY
+DepartmentName VARCHAR(20)
+HOD VARCHAR(20)
+
+*/
